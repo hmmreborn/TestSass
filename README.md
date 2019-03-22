@@ -1,2 +1,2 @@
 # TestLess
-Example for Less
+Example for Less sass
