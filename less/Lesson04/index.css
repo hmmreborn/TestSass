@@ -1,0 +1,22 @@
+@import "typo.css";
+div {
+  background-color: #f8f8f8;
+}
+.container {
+  width: 500px;
+  height: 410px;
+  border: 800px solid #eee;
+  color: #222222;
+}
+.container .content1 {
+  width: 25%;
+}
+.container .content2 {
+  width: 50%;
+}
+.container .content3 {
+  width: 75%;
+}
+.container .content4 {
+  width: 100%;
+}

@@ -1,0 +1,10 @@
+.header {
+  width: 400px;
+  height: 300px;
+  color: pink;
+  background: url('img/bd_logo1.png');
+  background-image: url("http://assets.fnord.com/images/bg.png");
+}
+.header ul {
+  width: 200px;
+}

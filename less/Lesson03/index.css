@@ -1,0 +1,57 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+.container .header {
+  width: 100%;
+  height: 80px;
+  background-color: pink;
+}
+.container .header li a {
+  text-decoration: none;
+}
+.container .header li a:hover {
+  color: pink;
+}
+.container .content {
+  height: 400px;
+}
+.container .content .left {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: dodgerblue;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.container .content .right {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: dodgerblue;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: 2px 5px 1px #000;
+  -moz-box-shadow: 2px 5px 1px #000;
+  -webkit-box-shadow: 2px 5px 1px #000;
+}
+.common {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: dodgerblue;
+}
+/*
+ CSS书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+
+2.大小(width, height, padding, margin)
+
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+
+4.背景(background, border等)
+
+5.其他(animation, transition等)
+ * */

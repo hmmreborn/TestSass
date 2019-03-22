@@ -1,0 +1,60 @@
+//嵌套,继承
+.container{
+    width: 500px;
+    margin: 0 auto;
+    .header{
+        width: 100%;
+        height: 80px;
+        background-color: pink;
+    }
+    .content{
+        height: 400px;
+        
+        .left{
+            float: left;
+            width: 50%;
+            text-align: center;
+            color: dodgerblue;
+        }
+        .right{
+            &:extend(.container .content .left);
+        }
+    }
+}
+
+
+/*
+ CSS书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+
+2.大小(width, height, padding, margin)
+
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+
+4.背景(background, border等)
+
+5.其他(animation, transition等)
+ * */
+
+
+//继承
+#header {
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  p { font-size: 12px;
+    a { text-decoration: none;
+      &:hover { border-width: 1px }
+    }
+  }
+}
+
+.bordered {
+  &.float {
+    float: left; 
+  }
+  .top {
+    margin: 5px; 
+  }
+}

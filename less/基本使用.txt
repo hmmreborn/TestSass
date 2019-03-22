@@ -1,0 +1,51 @@
+在服务器端使用
+安装
+在服务器端安装 LESS 的最简单方式就是通过 npm(node 的包管理器), 像这样:
+
+$ npm install less
+如果你想下载最新稳定版本的 LESS，可以尝试像下面这样操作:
+
+全局安装
+$ npm install -g less
+
+$ npm install less@latest
+使用
+只要安装了 LESS，就可以在Node中像这样调用编译器:
+
+var less = require('less');
+
+less.render('.class { width: 1 + 1 }', function (e, css) {
+    console.log(css);
+});
+上面会输出
+
+.class {
+  width: 2;
+}
+你也可以手动调用解析器和编译器:
+
+var parser = new(less.Parser);
+
+parser.parse('.class { width: 1 + 1 }', function (err, tree) {
+    if (err) { return console.error(err) }
+    console.log(tree.toCSS());
+});
+配置
+你可以向解析器传递参数:
+
+var parser = new(less.Parser)({
+    paths: ['.', './lib'], // Specify search paths for @import directives
+    filename: 'style.less' // Specify a filename, for better error messages
+});
+
+parser.parse('.class { width: 1 + 1 }', function (e, tree) {
+    tree.toCSS({ compress: true }); // Minify CSS output
+});
+在命令行下使用
+你可以在终端调用 LESS 解析器:
+
+$ lessc styles.less
+上面的命令会将编译后的 CSS 传递给 stdout, 你可以将它保存到一个文件中:
+
+$ lessc styles.less > styles.css
+如何你想将编译后的 CSS 压缩掉，那么加一个 -x 参数就可以了.

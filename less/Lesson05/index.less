@@ -1,0 +1,20 @@
+@width:400px;
+@color:#888/4;
+
+.container{
+    width: @width+100;
+    border: 1px+2 solid #eee;
+    color: @color;
+    .content1{
+        .loop-content(5px);
+        .loop-content1(#fff);
+    }
+}
+
+//Type Functions
+.loop-content(@n) when (isNumber(@n)){
+    width: @n;
+}
+.loop-content1(@n) when (isColor(@n)){
+    color: @n;
+}

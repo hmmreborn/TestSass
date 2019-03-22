@@ -1,0 +1,79 @@
+//嵌套,继承
+.container{
+    width: 500px;
+    margin: 0 auto;
+    .header{
+        width: 100%;
+        height: 80px;
+        background-color: pink;
+        ul{
+            li{
+                
+            }
+        }
+        //带选择器属性的混入
+        li{
+            a{
+                text-decoration: none;
+                .my-hover;
+            }
+            
+        }
+    }
+    .content{
+        height: 400px;
+        .left{
+            .common;
+            .border-radius(4px);
+        }
+        .right{
+            .common;
+            .border-radius(6px);
+            .box-shadow(2px,5px);
+        }
+        
+    }
+}
+
+//混合
+.my-hover(){
+    &:hover{
+       color: pink; 
+    }
+}
+
+//带参数混合
+.border-radius (@radius:5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+//@arguments 变量
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
+
+
+
+.common{
+    float: left;
+    width: 50%;
+    text-align: center;
+    color: dodgerblue;
+}
+/*
+ CSS书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+
+2.大小(width, height, padding, margin)
+
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+
+4.背景(background, border等)
+
+5.其他(animation, transition等)
+ * */

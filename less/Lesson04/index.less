@@ -1,0 +1,22 @@
+@import "lib.less";
+@import "lib";
+@import "typo.css";
+//变量运算
+@width:400px;
+@color:#888/4;
+@height: @width + 10px;
+.container{
+    width: @width+100;    
+    height: @height;
+    border: (@width * 2) solid #eee;
+    color: @color;
+    .loop-content(4);
+}
+
+.loop-content(@n,@i:1) when (@i <= @n){
+    .content@{i}{
+        width: (@i *100% / @n);
+    }
+    
+    .loop-content(@n,(@i+1));
+}

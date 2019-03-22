@@ -1,0 +1,28 @@
+//variables
+@background-color: #eee;
+@width: 500px;
+@link-color: darken(@background-color, 10%);
+
+//variables selector
+@selector-header:header;
+
+//variables 属性
+@property:color;
+
+//variables url @{name}字符串插值
+@base-url: "http://assets.fnord.com";
+@imgs:'img';
+
+.@{selector-header}{
+    @width:400px;
+    width: @width;
+    height: 300px;
+   @{property}:pink;
+   background: url('@{imgs}/bd_logo1.png');
+   background-image: url("@{base-url}/images/bg.png");
+   
+   ul{
+       @width:200px;
+       width: @width;
+   }
+}
