@@ -1,0 +1,111 @@
+@charset 'utf-8';
+$list-group-bg:#fff;
+$list-group-border:#ddd;
+$list-group-border-radius:4px;
+
+@mixin radius($direction,$radius:4px){
+    @if $direction == top {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }@else if $direction == bottom {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+}
+
+.content{
+    padding: 20px;
+    width: 80%;
+    
+    font:{
+        family:'simsun' ;
+        size:14px
+    }
+    
+    .list-group{
+      padding-left: 0;
+      
+      .list-group-item{
+          display: block;
+          position: relative;
+          padding: 10px 15px;
+          background-color:$list-group-bg;
+          border: 1px solid $list-group-border;
+          margin-bottom: -1px;
+          &:first-child{
+            @include radius(top);
+          }
+          &:last-child{
+              @include radius(bottom,6px);
+          }
+      }   
+    }
+}
+
+
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;  
+}
+
+.div-shadow{
+    @include box-shadow(0 4px 2px 1px red);
+}
+
+$type: monster;
+p {
+      @if $type == ocean {
+        color: blue;
+      } @else if $type == matador {
+        color: red;
+      } @else if $type == monster {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+
+.content-center{
+    
+    @for $i from 1 through 4 {
+      .item--#{$i} { width: 4em * $i; background-color: palegreen;}
+    }
+    
+    $len: 4;
+    @while $len > 0 {
+      .item--#{$len} { height: 2em * $len; background-color: red;}
+      $len: $len - 2;
+    }
+}
+
+@each $dir in left, middle, right {
+      .#{$dir}-icon {
+        background-image: url('/img/#{$dir}.png');
+  }
+}
+
+
+@each $animal in puma, sea-slug, egret, salamander {
+      .#{$animal}-icon {
+        background-image: url('/img/#{$animal}.png');
+  }
+}
+
+
+@each $animal, $color, $cursor in (puma, black, default),
+                                      (sea-slug, blue, pointer),
+                                      (egret, white, move) {
+      .#{$animal}-icon {
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
+  }
+}
+
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+  #{$header} {
+        font-size: $size;
+  }
+}

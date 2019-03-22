@@ -1,0 +1,25 @@
+@charset 'utf-8';
+//变量 $variable: 'initial value';
+$color:red;
+$color:pink;
+$width:0;
+$content:':after';
+
+$tr:5px 10px;
+$bl:7px 20px;
+
+
+
+div{
+    //padding: $tr $bl;
+    padding: join($tr,$bl);
+    $color:blue !global;//全局变量
+    color: $color;
+}
+h4{
+  color: $color;  
+}
+h4:after{
+    content: $content;
+    color: $color;
+}

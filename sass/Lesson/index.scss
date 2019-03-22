@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+$blue:#1875e7;
+$background-color:#eee;
+.common{
+    font-size: 14px;
+    height: 20px;
+    background-color: $background-color;
+}
+div{
+    color:$blue;
+}

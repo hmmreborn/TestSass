@@ -1,0 +1,120 @@
+.content {
+  padding: 20px;
+  width: 80%;
+  font-family: "simsun";
+  font-size: 14px;
+}
+.content .list-group {
+  padding-left: 0;
+}
+.content .list-group .list-group-item {
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: -1px;
+}
+.content .list-group .list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.content .list-group .list-group-item:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.div-shadow {
+  -webkit-box-shadow: 0 4px 2px 1px red;
+  -moz-box-shadow: 0 4px 2px 1px red;
+  box-shadow: 0 4px 2px 1px red;
+}
+
+p {
+  color: green;
+}
+
+.content-center .item--1 {
+  width: 4em;
+  background-color: palegreen;
+}
+.content-center .item--2 {
+  width: 8em;
+  background-color: palegreen;
+}
+.content-center .item--3 {
+  width: 12em;
+  background-color: palegreen;
+}
+.content-center .item--4 {
+  width: 16em;
+  background-color: palegreen;
+}
+.content-center .item--4 {
+  height: 8em;
+  background-color: red;
+}
+.content-center .item--2 {
+  height: 4em;
+  background-color: red;
+}
+
+.left-icon {
+  background-image: url("/img/left.png");
+}
+
+.middle-icon {
+  background-image: url("/img/middle.png");
+}
+
+.right-icon {
+  background-image: url("/img/right.png");
+}
+
+.puma-icon {
+  background-image: url("/img/puma.png");
+}
+
+.sea-slug-icon {
+  background-image: url("/img/sea-slug.png");
+}
+
+.egret-icon {
+  background-image: url("/img/egret.png");
+}
+
+.salamander-icon {
+  background-image: url("/img/salamander.png");
+}
+
+.puma-icon {
+  background-image: url("/images/puma.png");
+  border: 2px solid black;
+  cursor: default;
+}
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png");
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+.egret-icon {
+  background-image: url("/images/egret.png");
+  border: 2px solid white;
+  cursor: move;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=index.css.map */

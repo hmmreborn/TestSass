@@ -1,0 +1,11 @@
+1.:expanded标准格式
+sass --watch style.style.css --style expanded//标准格式
+
+2.:nested嵌套模式
+sass --watch style.style.css --style nested//嵌套模式
+
+3.:compact单行压缩
+sass --watch style.style.css --style compact//单行压缩
+
+4.:compressed压缩格式
+sass --watch style.style.css --style compressed// 压缩格式

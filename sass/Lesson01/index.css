@@ -1,0 +1,12 @@
+div {
+  padding: 5px 10px 7px 20px;
+  color: blue; }
+
+h4 {
+  color: blue; }
+
+h4:after {
+  content: ":after";
+  color: blue; }
+
+/*# sourceMappingURL=index.css.map */

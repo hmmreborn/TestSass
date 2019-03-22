@@ -1,0 +1,62 @@
+@charset 'utf-8';
+$list-group-bg:#fff;
+$list-group-border:#ddd;
+$list-group-border-radius:4px;
+
+@mixin radius($radius:4px){
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+.content{
+    padding: 20px;
+    width: 80%;
+    
+    font:{
+        family:'simsun' ;
+        size:14px
+    }
+    
+    .list-group{
+      padding-left: 0;
+      
+      .list-group-item{
+          display: block;
+          position: relative;
+          padding: 10px 15px;
+          background-color:$list-group-bg;
+          border: 1px solid $list-group-border;
+          margin-bottom: -1px;
+          &:first-child{
+            @extend .top-border-radius;
+          }
+          &:last-child{
+              @include radius(6px);
+          }
+      }   
+    }
+}
+
+@mixin common-link{
+    a{
+        color: pink;
+        background-color: blue;
+    }
+}
+
+@include common-link;
+
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;  
+}
+
+div{
+    @include box-shadow(0 4px 2px 1px red);
+}
+
+.top-border-radius{
+    border-top-left-radius:$list-group-border-radius;
+    border-top-right-radius: $list-group-border-radius;
+}
+

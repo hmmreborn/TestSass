@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAYA,GAAG;EAEC,OAAO,EAAE,iBAAa;EAEtB,KAAK,EADE,IAAI;;AAGf,EAAE;EACA,KAAK,EAJI,IAAI;;AAMf,QAAQ;EACJ,OAAO,EAjBF,QAAQ;EAkBb,KAAK,EARE,IAAI",
+"sources": ["../../../../%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2/WEB/sass/Lesson01/index.scss"],
+"names": [],
+"file": "index.css"
+}

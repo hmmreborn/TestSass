@@ -1,0 +1,23 @@
+1.安装
+gem install sass
+如果你使用的是Windows ，你可能首先需要安装Ruby 。
+
+如果要在命令行中运行 Sass ,只要使用
+sass input.scss output.css
+
+你还可以使用Sass命令来监视某个Sass文件的改动，并自动编译来更新 CSS ：
+sass --watch input.scss:output.css
+
+如果你的目录里有很多 Sass 文件，你也可以使用Sass命令来监视整个目录：
+sass --watch app/sass:public/stylesheets
+
+使用 sass --help 可以列出完整的帮助文档。
+
+SASS提供四种编译风格的选项：
+
+nested：嵌套缩进的css代码，它是默认值。
+expanded：没有缩进的、扩展的css代码。
+compact：简洁格式的css代码。
+compressed：压缩后的css代码。
+
+sass index.scss index.css --style nested
